@@ -65,13 +65,14 @@ def decode_morse_code():
         converted_to_text = [key_list[value_list.index(i)] for i in code]
         print(f"Decoded Morse Code: {''.join(converted_to_text).capitalize()}")
 
+is_on = False
 
-while True:
+while not is_on:
     selection = input("Please select, Convert or Decode: ").lower()
     if selection == "convert":
         convert_text_morse_code()
     elif selection == "decode":
         decode_morse_code()
     elif selection == "exit":
-        break
+        is_on = True
 
