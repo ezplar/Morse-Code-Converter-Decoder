@@ -47,7 +47,7 @@ def convert_text_morse_code():
     try:
         converted_to_morse_code = [dict_morse_code[letter] for letter in input_text]
     except KeyError:
-        print("Please input text/letters or numbers only. No spaces")
+        print("Please input text composed of letters or numbers only. No spaces")
     else:
         converted_to_morse_code = [dict_morse_code[letter] for letter in input_text]
         print(f"Converted to Morse Code: {' '.join(converted_to_morse_code)}")
@@ -72,3 +72,6 @@ while True:
         convert_text_morse_code()
     elif selection == "decode":
         decode_morse_code()
+    elif selection == "exit":
+        break
+
